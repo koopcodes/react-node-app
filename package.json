@@ -1,0 +1,25 @@
+{
+  "name": "react-node-app",
+  "version": "1.0.0",
+  "description": "CRUD app with React and Node",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "export NODE_ENV=test && jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/koopdev/react-node-app.git"
+  },
+  "keywords": [
+    "Koop",
+    "koop",
+    "react",
+    "node"
+  ],
+  "author": "koop",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/koopdev/react-node-app/issues"
+  },
+  "homepage": "https://github.com/koopdev/react-node-app#readme"
+}
