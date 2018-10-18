@@ -1,25 +1,39 @@
 {
-  "name": "react-node-app",
-  "version": "1.0.0",
-  "description": "CRUD app with React and Node",
-  "main": "src/server.js",
-  "scripts": {
-    "test": "export NODE_ENV=test && jasmine"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/koopdev/react-node-app.git"
-  },
-  "keywords": [
-    "Koop",
-    "koop",
-    "react",
-    "node"
-  ],
-  "author": "koop",
-  "license": "GPL-3.0-or-later",
-  "bugs": {
-    "url": "https://github.com/koopdev/react-node-app/issues"
-  },
-  "homepage": "https://github.com/koopdev/react-node-app#readme"
+	"name": "react-node-app",
+	"version": "1.0.0",
+	"description": "CRUD app with React and Node",
+	"main": "src/server.js",
+	"scripts": {
+		"test": "export NODE_ENV=test && jasmine && react-scripts test --env=jsdom",
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"eject": "react-scripts eject",
+		"lint": "eslint src/**/*.js src/**/*.jsx"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+ssh://git@github.com/koopdev/react-node-app.git"
+	},
+	"keywords": [
+		"Koop",
+		"koop",
+		"react",
+		"node"
+	],
+	"author": "koop",
+	"license": "GPL-3.0-or-later",
+	"bugs": {
+		"url": "https://github.com/koopdev/react-node-app/issues"
+	},
+	"homepage": "https://github.com/koopdev/react-node-app#readme",
+	"devDependencies": {
+		"eslint": "^5.7.0",
+		"eslint-plugin-react": "^7.11.1",
+		"jasmine": "^3.2.0",
+		"prettier": "1.14.3",
+		"request": "^2.88.0"
+	},
+	"dependencies": {
+		"express": "^4.16.4"
+	}
 }
