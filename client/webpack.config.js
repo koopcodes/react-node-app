@@ -1,8 +1,9 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const path = require('path');
 
 module.exports = {
-	entry: ['babel-polyfill', './src/index.js'],
+	entry: ['@babel/polyfill', './src/index.js'],
 
 	output: {
 		publicPath: '/',
@@ -72,8 +73,15 @@ module.exports = {
 	],
 
 	devServer: {
+		contentBase: path.join(__dirname, 'dist'),
+    compress: true,
 		historyApiFallback: true,
 		publicPath: '/',
-		contentBase: './dist',
-	},
+		open: true,
+		overlay: {
+      warnings: false,
+      errors: true
+			},
+		
+		},
 };

@@ -1,11 +1,11 @@
 {
 	"name": "react-node-app",
 	"version": "1.0.0",
-	"description": "CRUD app with React and Node",
+	"description": "Backend",
 	"main": "server/app.js",
 	"scripts": {
-		"test": "export NODE_ENV=test && jasmine && react-scripts test --env=jsdom",
-		"start": "node server/app.js && npm start"
+		"test": "export NODE_ENV=test && jasmine",
+		"start": "node server/app.js"
 	},
 	"repository": {
 		"type": "git",
