@@ -25,7 +25,7 @@ app.use(cors());
 app.use(require('morgan')('dev'));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, 'client/dist'))); // Serve static files from the React app
+app.use(express.static(path.join(__dirname, '../client/dist/'))); // Serve static files from the React app
 app.use(
 	session({
 		secret: process.env.kryptoSecret,
@@ -40,7 +40,7 @@ if (!isProduction) {
 }
 
 mongoose.promise = global.Promise;
-mongoose.connect('mongodb://koopdev:t3Ear525!@ds041177.mlab.com:41177/nodact-blog');
+mongoose.connect(process.env.MONGODB_URI);
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
