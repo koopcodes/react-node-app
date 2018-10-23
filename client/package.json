@@ -6,11 +6,11 @@
 		"type": "git",
 		"url": "git+ssh://git@github.com/koopdev/react-node-app.git"
 	},
-  "main": "webpack.config.js",
+  "main": "./src/index.js",
   "proxy": "http://localhost:8000",
   "scripts": {
     "test": "jasmine && react-scripts test --env=jsdom",
-    "build": "webpack --mode production",
+    "build": "webpack --mode production ./src/index.js --output ./dist/main.js",
     "start": "webpack-dev-server --mode development --progress --color"
   },
   "author": "koop",

@@ -3,9 +3,7 @@ const router = require('express').Router();
 const Articles = mongoose.model('Articles');
 
 router.post('/', (req, res, next) => {
-  console.log('router.post called');
   const { body } = req;
-
   if(!body.title) {
     return res.status(422).json({
       errors: {
@@ -37,7 +35,6 @@ router.post('/', (req, res, next) => {
 });
 
 router.get('/', (req, res, next) => {
-  console.log('router.get 1 return Articles called');
   return Articles.find()
     .sort({ createdAt: 'descending' })
     .then((articles) => res.json({ articles: articles.map(article => article.toJSON()) }))
@@ -45,7 +42,6 @@ router.get('/', (req, res, next) => {
 });
 
 router.param('id', (req, res, next, id) => {
-  console.log('router.param called');
   return Articles.findById(id, (err, article) => {
     if(err) {
       return res.sendStatus(404);
@@ -57,7 +53,6 @@ router.param('id', (req, res, next, id) => {
 });
 
 router.get('/:id', (req, res, next) => {
-  console.log('router.get 2 by id called');
   return res.json({
     article: req.article.toJSON(),
   });

@@ -17,7 +17,7 @@ app.get('/favicon.ico', function(req, res) {
   res.statusCode = 200;
   res.setHeader('Content-Length', favicon.length);
   res.setHeader('Content-Type', 'image/x-icon');
-  res.setHeader('Cache-Control', 'public, max-age=2592000'); // expiers after a month
+  res.setHeader('Cache-Control', 'public, max-age=2592000'); // expires after a month
   res.setHeader('Expires', new Date(Date.now() + 2592000000).toUTCString());
   res.end(favicon);
 });
@@ -25,7 +25,7 @@ app.use(cors());
 app.use(require('morgan')('dev'));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'client/dist'))); // Serve static files from the React app
 app.use(
 	session({
 		secret: process.env.kryptoSecret,
@@ -40,16 +40,15 @@ if (!isProduction) {
 }
 
 mongoose.promise = global.Promise;
-mongoose.connect('mongodb://localhost/lightblog');
+mongoose.connect('mongodb://koopdev:t3Ear525!@ds041177.mlab.com:41177/nodact-blog');
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
-  console.log('DB CONNECTED!!!!!')
+	console.log('DB CONNECTED');
 });
 mongoose.set('debug', true);
 
-// Add models
-require('./db/models/Articles');
+require('./db/models/Articles'); // Add models
 // Add routes
 app.use(require('./routes'));
 

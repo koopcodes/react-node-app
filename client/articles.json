@@ -1,0 +1,9 @@
+{
+	"_id": {"$oid": "5bcf73c3681aaa1046ca0634"},
+	"title": "Is this thing on?",
+	"body": "Test 1 2 3",
+	"author": "koop",
+	"createdAt": {"$date": "2018-10-23T19:17:23.147Z"},
+	"updatedAt": {"$date": "2018-10-23T19:17:23.147Z"},
+	"__v": 0
+}
