@@ -35,11 +35,11 @@ class Home extends React.Component {
 				<div className="row pt-5">
 					<div className="col-12 col-lg-6 offset-lg-3">
 						<h1 className="text-center">Nodeact Mock Blog</h1>
-						<h4 className="text-center">React Frontend</h4>
-						<h4 className="text-center">Node/Express/MongoDB Backend</h4>
-						<h4 className="text-center">
+						<h5 className="text-center">React Frontend</h5>
+						<h5 className="text-center">Node/Express/MongoDB Backend</h5>
+						<h5 className="text-center">
 							Deployed on Heroku with mLabs via Azure
-						</h4>
+						</h5>
 						<div className="text-center">
 							<a href="https://github.com/koopdev/react-node-app">
 								Source Code
