@@ -42,7 +42,7 @@ if (!isProduction) {
 }
 
 mongoose.promise = global.Promise;
-mongoose.connect('mongodb://heroku_2dzcm0b9heroku_2dzcm0b9@ds241133.mlab.com:41133/heroku_2dzcm0b9');
+mongoose.connect('mongodb://koopdev:t3Ear525!@ds241133.mlab.com:41133/heroku_2dzcm0b9');
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
