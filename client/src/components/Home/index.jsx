@@ -34,8 +34,8 @@ class Home extends React.Component {
 			<div className="container">
 				<div className="row pt-5">
 					<div className="col-12 col-lg-6 offset-lg-3">
-						<h1> className="text-center">Nodact Mock Blog</h1>
-						<h6> className="text-center">React Frontend</h6>
+						<h1 className="text-center">Nodact Mock Blog</h1>
+						<h6 className="text-center">React Frontend</h6>
 						<h6 className="text-center">Node/Express/MongoDB Backend</h6>
 						<h6 className="text-center">
 							Deployed on Heroku with mLabs via Azure
