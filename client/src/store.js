@@ -3,7 +3,7 @@ import { createStore, combineReducers } from 'redux';
 import { home } from './reducers';
 
 const reducers = combineReducers({
-  home,
+	home,
 });
 
 const store = createStore(reducers);
