@@ -25,9 +25,9 @@ app.use(require('morgan')('dev'));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, '../client/dist/'))); // Serve static files from the React app
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname + '../client/dist/index.html')) // Anything that doesn't match the above, send back index.html
-})
+// app.get('*', (req, res) => {
+//   res.sendFile(path.join(__dirname + '../client/dist/index.html')) // Anything that doesn't match the above, send back index.html
+// });
 app.use(
 	session({
 		secret: process.env.kryptoSecret,
