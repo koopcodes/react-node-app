@@ -38,7 +38,7 @@ module.exports = {
 				use: ExtractTextPlugin.extract({
 					fallback: 'style-loader',
 					use: [
-						{loader: 'css-loader', options: {minimize: true}},
+						{ loader: 'css-loader', options: { minimize: true } },
 						'sass-loader',
 					],
 				}),
@@ -64,7 +64,7 @@ module.exports = {
 	},
 
 	plugins: [
-		new ExtractTextPlugin({filename: 'style.css'}),
+		new ExtractTextPlugin({ filename: 'style.css' }),
 		new HtmlWebpackPlugin({
 			template: './resources/index.html',
 			filename: './index.html',
@@ -74,14 +74,13 @@ module.exports = {
 
 	devServer: {
 		contentBase: path.join(__dirname, 'dist'),
-    compress: true,
+		compress: true,
 		historyApiFallback: true,
 		publicPath: '/',
 		open: true,
 		overlay: {
-      warnings: false,
-      errors: true
-			},
-		
+			warnings: false,
+			errors: true,
 		},
+	},
 };
